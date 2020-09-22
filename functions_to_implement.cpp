@@ -95,11 +95,12 @@ double Sum(std::vector<double> nums);
 // Multiplies all numbers in a vector together and returns the resulting value
 double Product(std::vector<double> nums)
 {
-    double product = 0;
-    for (unsigned int i = 0; i < nums.size(); i++)
+    double product = nums[0];
+    for (unsigned int i = 1; i < nums.size(); i++)
     {
-        product = product * i;
+        product *= nums[i];
     }
+    std::cout << product;
     return product;
 }
 
