@@ -1,3 +1,6 @@
+#include <vector>
+#include <string>
+#include <iostream>
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -23,7 +26,7 @@ int RemoveTwos(int original){
     	{
         	original = original % 2;
     	}
-
+	return 0;
 }
 
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
@@ -36,7 +39,13 @@ std::vector<bool> EvenMask(std::vector<int>);
 std::vector<bool> OddMask(std::vector<int>);
 
 // Sums all numbers in a vector and returns the resulting value
-int Sum(std::vector<int> nums);
+int Sum(std::vector<int> nums){
+	int acc = 0;
+	for(int i = 0; i < nums.size(); i++){
+		acc+=nums[i];
+	}
+	return acc;
+}
 
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums);
