@@ -2,4 +2,4 @@ language: cpp
 
 script:
   - g++ -o test functions_to_implement.cpp
-  -./test
+  - ./test
