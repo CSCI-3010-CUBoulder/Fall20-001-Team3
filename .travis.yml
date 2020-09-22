@@ -1,4 +1,5 @@
 language: cpp
 
 script:
-  - g++ functions_to_implement.cpp
+  - g++ -o main functions_to_implement.cpp
+  - ./main
