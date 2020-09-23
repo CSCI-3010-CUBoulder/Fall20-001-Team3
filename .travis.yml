@@ -1,4 +1,0 @@
-language: cpp
-
-script:
-  - g++ main.cpp
