@@ -1,16 +1,13 @@
 CXX = g++
 CXXFLAGS	= -std=c++17 -Wall
 
-all: maze
+all: main
 
 clean:
-	rm Player.o Maze.o maze
+	rm functions_to_implement.o
 
-maze: Player.o Maze.o main.cpp
-	$(CXX) $(CXXFLAGS) main.cpp Player.o Maze.o -o maze
+maze: functions_to_implement.o main.cpp
+	$(CXX) $(CXXFLAGS) main.cpp functions_to_implement.o -o main
 
-Player.o: Player.cpp
-	$(CXX) $(CXXFLAGS) -c Player.cpp
-
-Maze.o: Maze.cpp
-	$(CXX) $(CXXFLAGS) -c Maze.cpp
+functions_to_implement.o: functions_to_implement.cpp
+	$(CXX) $(CXXFLAGS) -c functions_to_implement.cpp
