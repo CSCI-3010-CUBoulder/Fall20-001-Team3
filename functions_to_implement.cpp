@@ -55,10 +55,7 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num)
-{
-	return num*-1;
-}
+int Sign(int num);
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
@@ -96,9 +93,7 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
-double Sign(double num){
-	return num*-1;
-}
+double Sign(double num);
 
 
 // adds n to each element of the vector
