@@ -1,13 +1,10 @@
 CXX = g++
 CXXFLAGS	= -std=c++17 -Wall
 
-all: main
+all: test
 
 clean:
-	rm functions_to_implement.o
+	rm test
 
-maze: functions_to_implement.o main.cpp
-	$(CXX) $(CXXFLAGS) main.cpp functions_to_implement.o -o main
-
-functions_to_implement.o: functions_to_implement.cpp
-	$(CXX) $(CXXFLAGS) -c functions_to_implement.cpp
+test: test.cpp
+	$(CXX) $(CXXFLAGS) test.cpp -o test
