@@ -22,8 +22,8 @@ int RemoveTwos(int original)
 	int new_ = original%2;
 	while(original != new_)
 	{
-		new_ = original;
-		original = original%2;
+		new_ = original%2;
+		original = original/2;
 	}
 
 	return original;
@@ -36,7 +36,20 @@ std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
 std::vector<bool> EvenMask(std::vector<int>);
 
 // returns a vector with true for odd numbers and false for even numbers
-std::vector<bool> OddMask(std::vector<int> nums);
+std::vector<bool> OddMask(std::vector<int> nums)
+{
+	vector<bool> result;
+	for(int i:nums)
+	{
+		if(nums%2 == 0)
+		{
+			result.pushback(false);
+		}
+		else result.pushback(true);
+	}
+	
+	return result;
+}
 
 // Sums all numbers in a vector and returns the resulting value
 int Sum(std::vector<int> nums);
