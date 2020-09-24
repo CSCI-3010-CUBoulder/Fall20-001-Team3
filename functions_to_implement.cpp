@@ -1,8 +1,4 @@
-#include <vector>
-#include <string>
-#include <iostream>
 /* String functions section */
-
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
 
@@ -21,12 +17,16 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
 
 // divides an input integer by 2 until it is impossible to do so, then returns the final number.
 // (16 = 2 * 2 * 2 * 2 * 1 -> 1, 7 -> 7, 26 = 2 * 13 -> 13, 52 = 2 * 2 * 13 -> 13)
-int RemoveTwos(int original){
-	while (original % 2 != 1)
-    	{
-        	original = original % 2;
-    	}
-	return 0;
+int RemoveTwos(int original)
+{
+	int new_ = original%2;
+	while(original != new_)
+	{
+		new_ = original;
+		original = original%2;
+	}
+
+	return original;
 }
 
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
@@ -36,16 +36,10 @@ std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
 std::vector<bool> EvenMask(std::vector<int>);
 
 // returns a vector with true for odd numbers and false for even numbers
-std::vector<bool> OddMask(std::vector<int>);
+std::vector<bool> OddMask(std::vector<int> nums);
 
 // Sums all numbers in a vector and returns the resulting value
-int Sum(std::vector<int> nums){
-	int acc = 0;
-	for(int i = 0; i < nums.size(); i++){
-		acc+=nums[i];
-	}
-	return acc;
-}
+int Sum(std::vector<int> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums);
@@ -111,9 +105,7 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
-double Sign(double num){
-	return num*-1;
-}
+double Sign(double num);
 
 
 // adds n to each element of the vector
