@@ -26,7 +26,7 @@ int RemoveTwos(int original)
 	{
 		if(original%2 == 1) return original;
 		else if(original == 0) return 0;
-		else original = original/2;s
+		else original = original/2;
 	}
 }
 
@@ -45,26 +45,17 @@ std::vector<bool> OddMask(std::vector<int> nums)
 	std::vector<bool> result;
 	for(int i:nums)
 	{
-		if(nums%2 == 0)
+		if(i%2 == 0)
 		{
-			result.pushback(false);
+			result.push_back(false);
 		}
-		else result.pushback(true);
+		else result.push_back(true);
 	}
 	
 	return result;
 
 std::vector<bool> OddMask(std::vector<int>);
-
-// Sums all numbers in a vector and returns the resulting value
-int Sum(std::vector<int> nums) {
-    int sum = 0;
-    for (auto i : nums) {
-        sum = sum + i;
-    }
-    return sum;
-}
-
+	
 // Sums all numbers in a vector and returns the resulting value
 int Sum(std::vector<int> nums);
 
