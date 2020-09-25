@@ -13,4 +13,6 @@ TEST_CASE ( "Product are computed", "[product]") {
     REQUIRE( Product(v) == 24 );
 }
 
-
+TEST_CASE ( "Twos are removed", "[product]") {
+    REQUIRE( RemoveTwos(7) == 7 );
+}
