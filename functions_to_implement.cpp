@@ -35,8 +35,3 @@ double Product(std::vector<double> nums)
     }
     return product;
 }
-
-// returns -1 if the number is negative and 1 if positive
-double Sign(double num){
-	return num*-1;
-}
