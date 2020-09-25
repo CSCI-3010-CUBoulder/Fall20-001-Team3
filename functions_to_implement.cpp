@@ -1,4 +1,8 @@
 /* String functions section */
+
+#include <iostream>
+#include <vector>
+
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
 
@@ -17,6 +21,7 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
 
 // divides an input integer by 2 until it is impossible to do so, then returns the final number.
 // (16 = 2 * 2 * 2 * 2 * 1 -> 1, 7 -> 7, 26 = 2 * 13 -> 13, 52 = 2 * 2 * 13 -> 13)
+
 int RemoveTwos(int original)
 {
 	int new_ = original%2;
@@ -29,6 +34,8 @@ int RemoveTwos(int original)
 	return original;
 }
 
+int RemoveTwos(int original);
+
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
 std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
 
@@ -36,6 +43,7 @@ std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
 std::vector<bool> EvenMask(std::vector<int>);
 
 // returns a vector with true for odd numbers and false for even numbers
+
 std::vector<bool> OddMask(std::vector<int> nums)
 {
 	vector<bool> result;
@@ -49,13 +57,29 @@ std::vector<bool> OddMask(std::vector<int> nums)
 	}
 	
 	return result;
+
+std::vector<bool> OddMask(std::vector<int>);
+
+// Sums all numbers in a vector and returns the resulting value
+int Sum(std::vector<int> nums) {
+    int sum = 0;
+    for (auto i : nums) {
+        sum = sum + i;
+    }
+    return sum;
 }
 
 // Sums all numbers in a vector and returns the resulting value
 int Sum(std::vector<int> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
-int Product(std::vector<int> nums);
+int Product(std::vector<int> nums) {
+    int product = 1;
+    for (auto i : nums) {
+        product = product * i;
+    }
+    return product;
+}
 
 // Adds an integer n to each element of a given vector
 std::vector<int> VectorPlusN(std::vector<int> v, int n);
@@ -77,10 +101,7 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num)
-{
-	return num*-1;
-}
+int Sign(int num);
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
