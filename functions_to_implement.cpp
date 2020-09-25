@@ -1,4 +1,5 @@
 /* String functions section */
+
 #include <iostream>
 #include <vector>
 
@@ -20,6 +21,19 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
 
 // divides an input integer by 2 until it is impossible to do so, then returns the final number.
 // (16 = 2 * 2 * 2 * 2 * 1 -> 1, 7 -> 7, 26 = 2 * 13 -> 13, 52 = 2 * 2 * 13 -> 13)
+
+int RemoveTwos(int original)
+{
+	int new_ = original%2;
+	while(original != new_)
+	{
+		new_ = original%2;
+		original = original/2;
+	}
+
+	return original;
+}
+
 int RemoveTwos(int original);
 
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
@@ -29,6 +43,21 @@ std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
 std::vector<bool> EvenMask(std::vector<int>);
 
 // returns a vector with true for odd numbers and false for even numbers
+
+std::vector<bool> OddMask(std::vector<int> nums)
+{
+	vector<bool> result;
+	for(int i:nums)
+	{
+		if(nums%2 == 0)
+		{
+			result.pushback(false);
+		}
+		else result.pushback(true);
+	}
+	
+	return result;
+
 std::vector<bool> OddMask(std::vector<int>);
 
 // Sums all numbers in a vector and returns the resulting value
@@ -39,6 +68,9 @@ int Sum(std::vector<int> nums) {
     }
     return sum;
 }
+
+// Sums all numbers in a vector and returns the resulting value
+int Sum(std::vector<int> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums) {
