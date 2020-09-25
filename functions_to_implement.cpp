@@ -60,13 +60,6 @@ std::vector<bool> OddMask(std::vector<int>);
 int Sum(std::vector<int> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
-int Product(std::vector<int> nums) {
-    int product = 1;
-    for (auto i : nums) {
-        product = product * i;
-    }
-    return product;
-}
 
 // Adds an integer n to each element of a given vector
 std::vector<int> VectorPlusN(std::vector<int> v, int n);
