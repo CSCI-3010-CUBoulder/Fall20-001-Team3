@@ -4,17 +4,14 @@
 #include <vector>
 
 /*
-int RemoveTwos(int original){
-	while (original % 2 != 1)
-    	{
-        	original = original % 2;
-    	}
-
+int Sign(int num)
+{
+	return num*-1;
 }
 */
-TEST_CASE("Remove Twos check", "[removed]")
+TEST_CASE("Sign Check", "[sign]")
 {
-    REQUIRE(RemoveTwos(7) == 7);
+    REQUIRE(Sign(7) == -7);
 }
 
 /*
