@@ -22,14 +22,12 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
 
 int RemoveTwos(int original)
 {
-	int new_ = original%2;
-	while(original != new_)
+	while(true)
 	{
-		new_ = original%2;
-		original = original/2;
+		if(original%2 == 1) return original;
+		else if(original == 0) return 0;
+		else original = original/2;s
 	}
-
-	return original;
 }
 
 int RemoveTwos(int original);
