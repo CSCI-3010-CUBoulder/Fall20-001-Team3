@@ -42,7 +42,7 @@ std::vector<bool> EvenMask(std::vector<int>);
 
 std::vector<bool> OddMask(std::vector<int> nums)
 {
-	vector<bool> result;
+	std::vector<bool> result;
 	for(int i:nums)
 	{
 		if(nums%2 == 0)
