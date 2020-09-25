@@ -28,7 +28,7 @@ double Sum(std::vector<double> nums)
 // Multiplies all numbers in a vector together and returns the resulting value
 double Product(std::vector<double> nums)
 {
-    float product = 0;
+    float product = 1;
     for (unsigned int i = 0; i < nums.size(); i++)
     {
         product = product * nums.at(i);
